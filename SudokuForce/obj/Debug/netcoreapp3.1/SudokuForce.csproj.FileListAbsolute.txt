@@ -1,0 +1,13 @@
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\obj\Debug\netcoreapp3.1\SudokuForce.csprojAssemblyReference.cache
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\obj\Debug\netcoreapp3.1\SudokuForce.AssemblyInfoInputs.cache
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\obj\Debug\netcoreapp3.1\SudokuForce.AssemblyInfo.cs
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.exe
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.deps.json
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.runtimeconfig.json
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.runtimeconfig.dev.json
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.dll
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\SudokuForce.pdb
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\obj\Debug\netcoreapp3.1\SudokuForce.dll
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\obj\Debug\netcoreapp3.1\SudokuForce.pdb
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\demo.txt
+C:\Users\MVi\source\repos\SudokuForce\SudokuForce\bin\Debug\netcoreapp3.1\demo_ok.txt
