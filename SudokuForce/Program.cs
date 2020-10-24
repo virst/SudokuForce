@@ -7,6 +7,7 @@ namespace SudokuForce
     {
         static void Main(string[] args)
         {
+            AnalyticDict a = new AnalyticDict();
             DateTime dt = DateTime.Now;
             int n = 0;
             var sd = Sudoku.LoadFromFile("demo.txt");
@@ -20,6 +21,7 @@ namespace SudokuForce
                 {
                     n++;
                     var tmp = qq.Dequeue();
+                    a[tmp.Generation]++;
                     if (tmp.IsGood)
                     {
                         Console.WriteLine($"Решение ({n} вариантов проверено):");
@@ -39,6 +41,8 @@ namespace SudokuForce
             finally
             {
                 Console.WriteLine((DateTime.Now - dt).TotalSeconds + " sec.");
+                Console.WriteLine("Аналитика:");
+                Console.WriteLine(a);
             }
         }
     }

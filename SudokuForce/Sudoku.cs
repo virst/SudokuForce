@@ -19,6 +19,8 @@ namespace SudokuForce
         }
 
         private SudokuCell[,] _items;
+        private int _generation = 0;
+        public int Generation => _generation;
 
         public Sudoku()
         {
@@ -88,6 +90,7 @@ namespace SudokuForce
             for (int i = 0; i < 9; i++)
                 for (int j = 0; j < 9; j++)
                     ret[j / 3, i / 3][j % 3, i % 3] = this[j / 3, i / 3][j % 3, i % 3];
+            ret._generation = _generation + 1;
             return ret;
         }
 
