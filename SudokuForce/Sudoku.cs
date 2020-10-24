@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SudokuForce
 {
+    /// <summary>
+    /// Поле ля игры Судоку
+    /// </summary>
     public class Sudoku
     {
         public static Sudoku LoadFromFile(string fn)
@@ -28,6 +31,12 @@ namespace SudokuForce
                     _items[i, j] = new SudokuCell();
         }
 
+        /// <summary>
+        /// Доступ к ячейке
+        /// </summary>
+        /// <param name="x">Позиция по X</param>
+        /// <param name="y">Позиция по Y</param>
+        /// <returns>Конкретная ячейка</returns>
         public SudokuCell this[int x, int y]
         {
             get => _items[x, y];
@@ -91,6 +100,10 @@ namespace SudokuForce
             return ret;
         }
 
+        /// <summary>
+        /// Получить все варианты заполнения первой свободной ячейки
+        /// </summary>
+        /// <returns>Все варианты заполнения</returns>
         public List<Sudoku> FillOne()
         {
             List<Sudoku> ret = new List<Sudoku>();
@@ -111,6 +124,14 @@ namespace SudokuForce
             return ret;
         }
 
+        /// <summary>
+        /// Вохможные варианты для заполнения конкретной ячейки
+        /// </summary>
+        /// <param name="x">Позиция ячейки на поле по X</param>
+        /// <param name="y">Позиция ячейки на поле по Y</param>
+        /// <param name="a">Позиция числа в ячейке по X</param>
+        /// <param name="b">Позиция числа в ячейке по Y</param>
+        /// <returns>Массив доступных чисел</returns>
         public List<byte> AvalibleNums(int x, int y, int a, int b)
         {
             var ans = this[x, y].AvalibleNums;
@@ -124,6 +145,9 @@ namespace SudokuForce
             return ans;
         }
 
+        /// <summary>
+        /// Поле заполнено корректно ?
+        /// </summary>
         public bool IsGood
         {
             get

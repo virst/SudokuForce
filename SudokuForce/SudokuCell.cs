@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SudokuForce
 {
+    /// <summary>
+    /// Ячейка на поле СУДОКУ
+    /// </summary>
     public class SudokuCell
     {
         private byte[,] _bb;
@@ -13,15 +16,36 @@ namespace SudokuForce
             _bb = new byte[3, 3];
         }
 
+        /// <summary>
+        /// Получить или задать значение в ячейке
+        /// </summary>
+        /// <param name="a">Позиция по X</param>
+        /// <param name="b">Позиция по Y</param>
+        /// <returns>Значение в ячейке</returns>
         public char this[int a, int b]
         {
             get => _bb[a, b] == 0 ? '*' : _bb[a, b].ToString()[0];
             set => byte.TryParse(value.ToString(), out _bb[a, b]);
         }
 
+        /// <summary>
+        /// Задать значение в ячейке
+        /// </summary>
+        /// <param name="a">Позиция по X</param>
+        /// <param name="b">Позиция по Y</param>
+        /// <param name="bt">Число</param>
         public void SetNum(int a, int b, byte bt) => _bb[a, b] = bt;
+        /// <summary>
+        /// Получить значение в ячейке
+        /// </summary> значение в ячейке
+        /// <param name="a">Позиция по X</param>
+        /// <param name="b">Позиция по Y</param>
+        /// <returns>Число</returns>
         public byte GetNum(int a, int b) => _bb[a, b] ;
 
+        /// <summary>
+        /// Получить позицию первого "пустого" поля
+        /// </summary>
         public (int a,int b) FirstClear
         {
             get
@@ -33,6 +57,9 @@ namespace SudokuForce
             }
         }
 
+        /// <summary>
+        /// Получить все неиспользованные в ячейке числа
+        /// </summary>
         public List<byte> AvalibleNums
         {
             get
@@ -48,6 +75,9 @@ namespace SudokuForce
             }
         }
 
+        /// <summary>
+        /// Ячейка заполнена корректно
+        /// </summary>
         public bool IsGood
         {
             get
@@ -63,6 +93,9 @@ namespace SudokuForce
             }
         }
 
+        /// <summary>
+        /// Ячейка полностью заполнена
+        /// </summary>
         public bool IsFull
         {
             get
